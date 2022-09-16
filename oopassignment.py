@@ -42,7 +42,8 @@ class BankAccount:
     def __repr__(self):
         return f"ACCOUNT NO:{self.account_number}, BAL:{ self.balance},OWNER:{self.owner} TYPE:{self.type}"
 
-        
+bnk=BankAccount(1000000,10000,"ronnie","current")
+print(bnk)        
 class Bank:
     accounts=[]
     def __init__(self,name,accounts):
@@ -53,7 +54,8 @@ class Bank:
         return f"ACCOUNT NAME:{self.name}, ACCOUNTS:{ self.accounts}"
         
 bank1=Bank("equity",10030492034920)
-print(bank1.accounts)
+print(bank1)
+
 class Customer:
     accounts=[]
     def __init__(self,name,accounts):
@@ -62,10 +64,9 @@ class Customer:
     
     def __repr__(self):
         return f"NAME:{self.name}, ACCOUNTS:{ self.accounts}"
-    
-    
-# customer1=Customer("ronnie",12324223132)
-# print(customer1.name) 
+     
+customer1=Customer("ronnie",12324223132)
+print(customer1) 
       
 class Transactions:
     def __init__(self,account,amount,type):
@@ -74,5 +75,8 @@ class Transactions:
         self.type=type
     
     def __repr__(self):
-        return f"ACCOUNT:{self.name}, AMOUNT:{ self.amount}, TYPE:{self.type}"
+        return f"ACCOUNT:{self.account}, AMOUNT:{ self.amount}, TYPE:{self.type}"
+    
+tr=Transactions("ronnie",12324223132,"dep")
+print(tr) 
 
